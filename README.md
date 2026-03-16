@@ -1,8 +1,8 @@
 📊 Telecommunications Customer Churn Prediction
 
-Machine learning project that analyzes telecommunications customer data to predict churn and identify the key factors influencing customer retention.
+This project uses machine learning to predict customer churn for a telecommunications company. The goal is to identify customers who are likely to cancel their service so businesses can take proactive steps to improve retention.
 
-The objective is to build a predictive model that helps businesses identify customers likely to cancel their service before it happens, allowing companies to take proactive retention actions.
+Customer churn is a major challenge for subscription-based businesses, as acquiring new customers is often more expensive than retaining existing ones. By analyzing customer behavior and service usage patterns, this project builds predictive models capable of identifying high-risk customers.
 
 🛠 Tools & Technologies
 
@@ -15,57 +15,54 @@ Jupyter Notebook
 
 📂 Dataset
 
-The dataset contains customer records from a telecommunications provider, including:
+The dataset contains customer records from a telecommunications provider and includes:
 
-Demographic information
+Customer demographics
+
 Service subscriptions
+
 Contract type
-Monthly charges
+
+Billing information (monthly and total charges)
+
 Customer tenure
+
 Churn status
 
-Each row represents a single customer, while the columns describe customer characteristics, service usage, billing information, and whether the customer eventually churned.
+Each row represents a customer and each column represents a feature used for analysis or prediction.
 
 ⚙️ Methodology
 Data Exploration
 
-Analyzed patterns and distributions across key variables:
+Exploratory Data Analysis (EDA) was performed to understand customer behavior and identify patterns related to churn. Key variables such as tenure, monthly charges, and contract types were analyzed using statistical summaries and visualizations.
 
-Customer tenure
+Data Preparation
 
-Monthly charges
-
-Contract types
-
-Service subscriptions
-
-Visualization and correlation analysis were used to identify relationships between customer behavior and churn.
-
-Data Cleaning
-
-Prepared the dataset for modeling by:
+The dataset was cleaned and prepared for modeling by:
 
 Handling missing values
 
 Converting categorical variables into numerical format
 
-Ensuring data consistency across features
+Ensuring consistent data types
 
-Proper data preparation ensures the model learns meaningful patterns from the data.
+Proper preprocessing ensures that machine learning models can effectively learn patterns from the data.
 
-Feature Engineering
+Feature Analysis
 
-Analyzed and transformed features to improve predictive performance.
-
-Key variables included:
+Key features influencing churn were analyzed, including:
 
 Customer tenure
+
 Billing behavior
+
 Service combinations
 
-These features help capture patterns related to customer engagement and service usage.
+Contract type
 
-Modeling
+These features provide insights into customer engagement and retention risk.
+
+Model Training
 
 Several machine learning classification models were trained and compared:
 
@@ -75,36 +72,52 @@ Random Forest
 
 Gradient Boosting
 
-The dataset was split into training and testing sets to evaluate model performance on unseen data.
+The dataset was split into training and testing sets to ensure reliable model evaluation.
 
-Evaluation
+Model Evaluation
 
-Model performance was evaluated using classification metrics:
+Models were evaluated using multiple classification metrics:
 
 Accuracy
+
 Precision
+
 Recall
+
 F1 Score
+
 ROC-AUC
 
-These metrics provide a balanced view of how effectively the model identifies customers likely to churn.
+These metrics provide a balanced understanding of how well the models identify customers likely to churn.
 
 📈 Results
 
-The final model demonstrated strong predictive performance:
+The final model achieved strong predictive performance:
 
-Precision: ~0.80
-Recall: ~0.64
+Metric	Score
+Precision	~0.80
+Recall	~0.64
+ROC-AUC	~0.90
 
-This indicates the model can identify many customers at risk of leaving while maintaining a reasonable balance between false positives and missed churn cases.
-
-Gradient Boosting achieved the best performance across the evaluated models.
+The Gradient Boosting model performed best overall and was selected as the final model.
 
 🎯 Key Insights
 
-Customer tenure is the strongest predictor of churn
-Customers with shorter tenure are more likely to cancel their service
-Contract type plays a significant role in customer retention
-Customers on month-to-month contracts show higher churn rates
+Analysis revealed several important factors influencing churn:
 
-These insights highlight how machine learning models can help telecommunications companies proactively identify high-risk customers and improve retention strategies.
+Customer tenure is the strongest predictor of churn
+
+Customers with shorter tenure are significantly more likely to leave
+
+Contract type strongly affects retention
+
+Customers on month-to-month contracts have higher churn risk
+
+These insights can help telecommunications companies identify at-risk customers and develop targeted retention strategies.
+
+🚀 Project Outcome
+
+This project demonstrates how machine learning can be applied to predict customer churn and extract actionable business insights from customer data.
+
+By identifying customers at risk of leaving, businesses can take proactive steps such as targeted promotions, service improvements, or loyalty programs to improve customer retention.
+
